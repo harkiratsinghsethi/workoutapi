@@ -1,0 +1,61 @@
+{
+  "exercises": {
+    "arm": {
+      "Barbell Curl": "Sample Konfabulator Widget",
+      "Dumbbell Alternate Bicep Curl": "main_window",
+      "Standing Biceps Cable Curl": 500,
+      "Alternate Incline Dumbbell Curl": 500,
+      "Triceps Pushdown": "sxaxs",
+      "Standing One-Arm Dumbbell Triceps Extension": "sxsx",
+      "Lying Triceps Press": "dsxs",
+      "Bench Dips": "xsxs",
+      "Decline Dumbbell Triceps Extension": "dswds",
+      "Cross Body Hammer Curl": "xsxasx"
+    },
+    "chest": {
+      "Barbell Bench Press": "Images/Sun.png",
+      "Low-Incline Barbell Bench Press ": "sun1",
+      "Machine Decline Press ": 250,
+      "Seated Machine Chest Press  ": 250,
+      "Dips For Chest": "center",
+      "Flat Bench Dumbbell Press": ""
+    },
+    "shoulder": {
+      "Dumbbell Shoulder Press": "Click Here",
+      "Upright Barbell Row ": 36,
+      "Side Lateral Raise": "bold",
+      "Front Cable Raise": "text1",
+      "Arnold Dumbbell Press": 250,
+      "Front Two-Dumbbell Raise": 100,
+      "Machine Shoulder (Military) Press": "center"
+    },
+    "abs": {
+      "Hanging Leg Raise Or Knee Raise": "",
+      "Machine Crunch": "",
+      "Kneeling Cable Crunch": "",
+      "Decline Russian Twist With Medicine Ball": "",
+      " Exercise-Ball Pike": "",
+      "Plank": ""
+    },
+    "back": {
+      "Barbell Deadlift": "",
+      "Bent-Over Barbell Row": "",
+      "Wide-Grip Pull-Up": "",
+      "Close-Grip Pull-Down": "",
+      "Single-Arm Dumbbell Row": "",
+      "Decline Bench Dumbbell Pull-Over": "",
+      "Seated Bent-Over Rear Delt Raise": "",
+      "Reverse Machine Flyes": "",
+      "Dumbbell Shrug":""
+    },
+    "legs": {
+      "Barbell Squat": "",
+      "Dumbbell Lunges": "",
+      "Leg Press": "",
+      "Leg Extensions": "",
+      "Standing Calf Raises": "",
+      "Seated Leg Curl": "",
+      "Dumbbell Step Ups": ""
+    }
+  }
+}
