@@ -1,6 +1,6 @@
 module.exports = {
     getExcercise: (req, res) => {
-        res.status(200).send('test');
+        res.status(200).send('test-git');
     }
 };
 
