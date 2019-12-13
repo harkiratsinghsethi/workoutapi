@@ -40,7 +40,7 @@ module.exports = {
                 throw err;
             }
             connection.query(sql, (err1, result) => {
-                console.log('*', result);
+                console.log(result);
 
                 connection.release();
                 if (err) {
@@ -61,7 +61,7 @@ module.exports = {
                 throw err;
             }
             connection.query(sql, (err1, result) => {
-                console.log('*', result);
+                console.log(result);
 
                 connection.release();
                 if (err) {
@@ -80,6 +80,7 @@ module.exports = {
 
         console.log('book appointment');
         const sql = `UPDATE seller_appointment SET Is_Available = 'NO' where seller_slot_start_time = '${startTime}' AND seller_slot_end_time='${endTime}' AND seller_id = ${sellerId}`;
+        console.log(sql)
         pool.getConnection((err, connection) => {
             if (err) {
                 throw err;
