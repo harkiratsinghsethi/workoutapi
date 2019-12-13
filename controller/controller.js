@@ -10,7 +10,7 @@ const pool = mysql.createPool({
     password: 'lwYFEwQrKd',
     database: 'knBlMynuHC'
 });
-console.log('*******s',pool);
+console.log('*******s', pool);
 // pool.getConnection((err, connection) => {
 //     if (err) throw err; // not connected!
 //
@@ -94,7 +94,7 @@ module.exports = {
 
                     throw err1;
                 }
-                res.send(result);
+                res.send('data inserted successfully');
             });
         });
     }
