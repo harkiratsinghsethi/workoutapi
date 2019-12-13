@@ -33,12 +33,13 @@ module.exports = {
     },
     getSellerDetails: (req, res) => {
         const sql = 'SELECT * FROM seller_details';
+        console.log(pool);
         pool.getConnection((err, connection) => {
             if (err) {
                 throw err;
             }
             connection.query(sql, (err1, result) => {
-                console.log('*',result);
+                console.log('*', result);
 
                 connection.release();
                 if (err) {
@@ -59,7 +60,7 @@ module.exports = {
                 throw err;
             }
             connection.query(sql, (err1, result) => {
-                console.log('*',result);
+                console.log('*', result);
 
                 connection.release();
                 if (err) {
@@ -83,7 +84,7 @@ module.exports = {
                 throw err;
             }
             connection.query(sql, (err1, result) => {
-                console.log('*',result);
+                console.log('*', result);
 
                 connection.release();
                 if (err) {
