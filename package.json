@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "echo \"to view the results from this api use URL : http://localhost:3001/api/getExercise\" && nodemon server.js"
   },
   "keywords": [
     "RESTful"
@@ -26,6 +26,9 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "mongodb": "^3.3.5",
+    "mongoose": "^5.8.0",
+    "mysql": "^2.17.1",
     "nodemon": "^1.19.3",
     "request": "^2.88.0",
     "require": "^2.4.20"
