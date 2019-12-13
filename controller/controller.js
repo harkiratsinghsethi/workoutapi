@@ -94,7 +94,7 @@ module.exports = {
 
                     throw err1;
                 }
-                res.send('data inserted successfully');
+                res.send(result);
             });
         });
     }
