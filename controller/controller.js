@@ -167,7 +167,7 @@ module.exports = {
     },
     findSellerID: (req, res) => {
         const sellerId = req.query.seller_id;
-        console.log(`select seller_id from seller_details where seller_id=${sellerId}`);
+        console.log(`select seller_id from seller_details where seller_id=${sellerId}`,sellerId);
 
         const sql = `select seller_id from seller_details where seller_id=${sellerId}`;
         console.log(sql)
