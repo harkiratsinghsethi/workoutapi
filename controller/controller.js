@@ -97,6 +97,95 @@ module.exports = {
                 res.send(result);
             });
         });
+    },
+    getAppointmentRequests: (req, res) => {
+        const sellerId = req.query.seller_id;
+        const sql = `select * from seller_appointment where Is_available ='NO' AND is_confirmed ='YES' AND seller_id =${sellerId}`;
+        console.log(sql)
+        pool.getConnection((err, connection) => {
+            if (err) {
+                throw err;
+            }
+            connection.query(sql, (err1, result) => {
+                console.log('*', result);
+
+                connection.release();
+                if (err) {
+                    console.log('##');
+
+                    throw err1;
+                }
+                res.send(result);
+            });
+        });
+    },
+    rejectRequest: (req, res) => {
+        const startTime = req.query.start_time;
+        const endTime = req.query.end_time;
+        const sellerId = req.query.seller_id;
+        const sql = `UPDATE seller_appointment SET Is_Available = 'YES' where seller_slot_start_time = '${startTime}' AND seller_slot_end_time='${endTime}' AND seller_id = ${sellerId}`;
+        console.log(sql)
+        pool.getConnection((err, connection) => {
+            if (err) {
+                throw err;
+            }
+            connection.query(sql, (err1, result) => {
+                console.log('*', result);
+
+                connection.release();
+                if (err) {
+                    console.log('##');
+
+                    throw err1;
+                }
+                res.send(result);
+            });
+        });
+    },
+    acceptRequest: (req, res) => {
+        const startTime = req.query.start_time;
+        const endTime = req.query.end_time;
+        const sellerId = req.query.seller_id;
+        const sql = `UPDATE seller_appointment SET Is_Available = 'NO',is_confirmed='YES' where seller_slot_start_time = '${startTime}' AND seller_slot_end_time='${endTime}' AND seller_id = ${sellerId}`;
+        console.log(sql)
+        pool.getConnection((err, connection) => {
+            if (err) {
+                throw err;
+            }
+            connection.query(sql, (err1, result) => {
+                console.log('*', result);
+
+                connection.release();
+                if (err) {
+                    console.log('##');
+
+                    throw err1;
+                }
+                res.send(result);
+            });
+        });
+    },
+    findSellerID: (req, res) => {
+        const sellerId = req.query.seller_id;
+        const sql = `select seller_id from seller_details where seller_id=${sellerId}`;
+        console.log(sql)
+        pool.getConnection((err, connection) => {
+            if (err) {
+                throw err;
+            }
+            connection.query(sql, (err1, result) => {
+                console.log('*', result);
+
+                connection.release();
+                if (err) {
+                    console.log('##');
+
+                    throw err1;
+                }
+                res.send(result);
+            });
+        });
     }
-};
+    };
+
 
