@@ -1,3 +1,5 @@
+const proxy = require("http-proxy-middleware");
+
 let express = require('express');
 bodyParser = require('body-parser');
 
@@ -8,6 +10,9 @@ let api = require('./routes/routes');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.use('/api', api);
+app.use('/api', api, proxy({
+    target: "http://localhost:4000",
+    changeOrigin: true
+}));
 app.listen(port);
 console.log('RESTful API server started on: ' + port);
