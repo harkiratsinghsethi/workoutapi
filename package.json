@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "echo \"to view the results from this api use URL : http://localhost:3001/api/getExercise\" && nodemon server.js"
   },
+  "proxy": "http://localhost:4000",
   "keywords": [
     "RESTful"
   ],
