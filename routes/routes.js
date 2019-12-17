@@ -10,6 +10,7 @@ router.route('/bookAppointmentSlot').get(controller.bookAppointmentSlot);
 router.route('/findSellerID').get(controller.findSellerID);
 
 router.route('/showTimeSlot').get(controller.showTimeSlot);
+router.route('/getAppointmentRequests').get(controller.getAppointmentRequests);
 
 
 module.exports = router;
