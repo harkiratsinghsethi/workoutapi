@@ -11,6 +11,9 @@ router.route('/findSellerID').get(controller.findSellerID);
 
 router.route('/showTimeSlot').get(controller.showTimeSlot);
 router.route('/getAppointmentRequests').get(controller.getAppointmentRequests);
+router.route('/rejectRequest').get(controller.rejectRequest);
+router.route('/acceptRequest').get(controller.acceptRequest);
+
 
 
 module.exports = router;
