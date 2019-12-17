@@ -100,7 +100,7 @@ module.exports = {
     },
     getAppointmentRequests: (req, res) => {
         const sellerId = req.query.seller_id;
-        const sql = `select * from seller_appointment where Is_available ='NO' AND is_confirmed ='YES' AND seller_id =${sellerId}`;
+        const sql = `select * from seller_appointment where Is_available ='NO' AND is_confirmed ='NO' AND seller_id =${sellerId}`;
         console.log(sql)
         pool.getConnection((err, connection) => {
             if (err) {
