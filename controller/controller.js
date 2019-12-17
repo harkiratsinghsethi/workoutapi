@@ -165,13 +165,30 @@ module.exports = {
             });
         });
     },
-    findSellerID: (req, res) => {
-        console.log('into seller id');
+    showTimeSlot: (req, res) => {
         const sellerId = req.query.seller_id;
-        console.log(`select seller_id from seller_details where seller_id=${sellerId}`, sellerId);
+        const sql = `select seller_slot_start_time,seller_slot_end_time from seller_appointment where seller_id=${sellerId}`
+        pool.getConnection((err, connection) => {
+            if (err) {
+                throw err;
+            }
+            connection.query(sql, (err1, result) => {
+                console.log('*', result);
+
+                connection.release();
+                if (err) {
+                    console.log('##');
+
+                    throw err1;
+                }
+                res.send(result);
+            });
+        });
+    },
+    findSellerID: (req, res) => {
+        const sellerId = req.query.seller_id;
 
         const sql = `select seller_id from seller_details where seller_id=${sellerId}`;
-        console.log(sql)
         pool.getConnection((err, connection) => {
             if (err) {
                 throw err;
