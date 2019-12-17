@@ -147,7 +147,7 @@ module.exports = {
         const endTime = req.query.end_time;
         const sellerId = req.query.seller_id;
         const sql = `UPDATE seller_appointment SET Is_Available = 'NO',is_confirmed='YES' where seller_slot_start_time = '${startTime}' AND seller_slot_end_time='${endTime}' AND seller_id = ${sellerId}`;
-        console.log(sql)
+        console.log(sql);
         pool.getConnection((err, connection) => {
             if (err) {
                 throw err;
@@ -161,6 +161,7 @@ module.exports = {
 
                     throw err1;
                 }
+                console.log(result);
                 res.send(result);
             });
         });
