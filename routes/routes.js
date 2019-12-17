@@ -7,6 +7,8 @@ router.route('/getSellerDetails').get(controller.getSellerDetails);
 router.route('/getAvailableAppointments').get(controller.getAvailableAppointments);
 router.route('/bookAppointmentSlot').get(controller.bookAppointmentSlot);
 
+router.route('/findSellerID').get(controller.findSellerID);
+
 router.route('/showTimeSlot').get(controller.showTimeSlot);
 
 
