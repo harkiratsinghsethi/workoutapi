@@ -205,6 +205,31 @@ module.exports = {
                 res.send(result);
             });
         });
+    },
+
+    submitTimeSlot: (req, res) => {
+        const startTime = req.query.start_time;
+        const endTime = req.query.end_time;
+        const sellerId = req.query.seller_id;
+
+        const sql = `insert into seller_appointment (seller_slot_start_time,seller_slot_end_time,Is_Available,buyer_name,seller_id,is_confirmed) values ('${startTime}','${endTime}','YES','','${sellerId}','NO')`;
+        console.log(sql);
+        // pool.getConnection((err, connection) => {
+        //     if (err) {
+        //         throw err;
+        //     }
+        //     connection.query(sql, (err1, result) => {
+        //         console.log('*', result);
+        //
+        //         connection.release();
+        //         if (err) {
+        //             console.log('##');
+        //
+        //             throw err1;
+        //         }
+        //         res.send(result);
+        //     });
+        // });
     }
 };
 
