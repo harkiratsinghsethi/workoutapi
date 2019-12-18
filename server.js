@@ -1,4 +1,4 @@
-var cors = require('cors');
+// let cors = require('cors');
 
 
 let express = require('express');
@@ -9,7 +9,7 @@ app = express();
 port = process.env.PORT || 3001;
 let api = require('./routes/routes');
 // app.use(allowCrossDomain);
-app.use(cors());
+// app.use(cors());
 
 
 app.use(bodyParser.json());

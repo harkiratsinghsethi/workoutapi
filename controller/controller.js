@@ -168,7 +168,7 @@ module.exports = {
     },
     showTimeSlot: (req, res) => {
         const sellerId = req.query.seller_id;
-        const sql = `select seller_slot_start_time,seller_slot_end_time from seller_appointment where seller_id=${sellerId}`
+        const sql = `select seller_slot_start_time,seller_slot_end_time from seller_appointment where seller_id=${sellerId}`;
         pool.getConnection((err, connection) => {
             if (err) {
                 throw err;
