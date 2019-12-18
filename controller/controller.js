@@ -227,7 +227,13 @@ module.exports = {
 
                     throw err1;
                 }
-                res.send(result);
+                if (result === undefined) {
+                    console.log('in undefined');
+                    return res.sendStatus(404)
+                }
+                console.log('in result');
+
+                return res.send(result);
             });
         });
     }
